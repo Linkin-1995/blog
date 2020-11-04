@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨域测试</title>
+</head>
+<script src="/static/jquery-1.11.3.js"></script>
+<script>
+    $(function(){
+        $('#btn').click(function(){
+            $.ajax({
+                url:'http://localhost:8000/test_cors_server',
+                type:'GET',
+                success:function(data){
+                    alert(data);
+                }
+            })
+
+        })
+    })
+</script>
+<body>
+    <button id="btn">测试cors</button>
+</body>
+</html>
